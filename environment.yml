@@ -1,0 +1,10 @@
+name: cps330
+channels:
+  - defaults
+dependencies:
+  - python
+  - numpy
+  - matplotlib
+  - pandas
+  - scikit-learn
+  - tensorflow
