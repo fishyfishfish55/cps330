@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python
   - numpy
+  - graphviz
   - matplotlib
   - pandas
   - scikit-learn
@@ -11,4 +12,4 @@ dependencies:
   - ipykernel
   - keras
   - pip:
-      - pypcapkit
+      - scapy
