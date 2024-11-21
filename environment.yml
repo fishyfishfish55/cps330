@@ -3,13 +3,15 @@ channels:
   - defaults
 dependencies:
   - python
-  - numpy
-  - graphviz
-  - matplotlib
-  - pandas
-  - scikit-learn
-  - tensorflow
-  - ipykernel
-  - keras
+  - ipykernel # Better REPL
+  - pip # packages not in environment
+  - numpy # math
+  - graphviz # graph visualization
+  - matplotlib # plotting
+  - pandas # data manipulation
+  - tensorflow # neural networks
+  - scikit-learn # machine learning
+  - keras # ANN framework
   - pip:
-      - scapy
+      - PyX # PDF utility
+      - scapy # packet manipulation
