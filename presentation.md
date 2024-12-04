@@ -1,10 +1,11 @@
 # Introduction <!-- 1 min -->
-- Project: Building a network Intrusion Detection System (IDS) <!-- what is an IDS>
-- Found many examples <!-- see kaggle, google, etc. MAchine learning is industry standard>
+- Project: Building a network Intrusion Detection System (IDS) <!-- what is an IDS-->
+- Found many examples <!-- see kaggle, google, etc. Machine learning is industry standard for IDS systems -->
+- Bit off a trifle more than I could chew
 - Dataset: [UNSW-NB15 dataset](https://research.unsw.edu.au/projects/unsw-nb15-dataset) <!-- >
     - Moustafa, Nour, and Jill Slay. "UNSW-NB15: a comprehensive data set for network intrusion detection systems (UNSW-NB15 network data set)."Military Communications and Information Systems Conference (MilCIS), 2015. IEEE, 2015.
     - Moustafa, Nour, and Jill Slay. "The evaluation of Network Anomaly Detection Systems: Statistical analysis of the UNSW-NB15 data set and the comparison with the KDD99 data set." Information Security Journal: A Global Perspective (2016): 1-14.
-- Paper: ["Network Intrusion Detection System using Deep Learning"](https://doi.org/10.1016/j.procs.2021.05.025) <!-- Goes through the steps of creating an ANN for IDS purposes>
+- Paper: ["Network Intrusion Detection System using Deep Learning"](https://doi.org/10.1016/j.procs.2021.05.025) <!-- Goes through the steps of creating an ANN for IDS purposes -->
 # Explaination <!-- 2 min -->
 ## Detection methods
 - Signature-based
@@ -21,7 +22,7 @@
 ## CNN vs other ANNs
 - CNN allows for finding more complex pattern compared with a fully-connected model
 # Implementation <!-- 2-3 min -->
-- Local notebook, developed on our very own malachi (containing an NVIDIA Quadro)
+- Local notebook, developed on our very own malachi (containing a better GPU than my laptop)
 ```
             .-/+oossssoo+\-.               levi.lacoss@malachi 
         ´:+ssssssssssssssssss+:`           ------------------- 
@@ -40,7 +41,7 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter
   +sssssssssdmydMMMMMMMMddddyssssssss+     Terminal: kitty 
    \ssssssssssshdmNNNNmyNMMMMhssssss/      Terminal Font: monospace 9.0 
     .ossssssssssssssssssdMMMNysssso.       CPU: Intel i7-10700 (16) @ 4.800GHz 
-      -+sssssssssssssssssyyyssss+-         GPU: NVIDIA Quadro P1000 
+      -+sssssssssssssssssyyyssss+-         GPU: NVIDIA Quadro P1000
         `:+ssssssssssssssssss+:`           GPU: Intel Device 9bc5 
             .-\+oossssoo+/-.               Memory: 5822MiB / 15701MiB 
                                            GPU Driver: Dell Device [1028:09f6] 
@@ -51,9 +52,12 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter
                                            Users: levi.lacoss 
                                            Locale: en_US.UTF-8
 ```
-- someone turned him off during the break >:(
+- Zephaniah has a better GPU, which I'm planning to use to actually train the network
 ## Data Exploration
 ### Explain categories
+- training_set / testing_set
+- NUSW-NB15_features.csv <!-- Extremely annoying -->
+- 
 ## Network Results
 ### Weaknesses
 ### Strenths
