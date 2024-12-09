@@ -1,11 +1,18 @@
 # Introduction <!-- 1 min -->
 - Project: Building a network Intrusion Detection System (IDS) <!-- what is an IDS-->
-- Found many examples <!-- see kaggle, google, etc. Machine learning is industry standard for IDS systems -->
+    - Started with the idea of building a demo application; reduced scope to a notebook
+    - An intrusion detection system is a device or software application that monitors a network or systems for malicious activity or policy violations. Any intrusion activity or violation is typically either reported to an administrator or collected centrally using a security information and event management system. [Wikipedia](https://en.wikipedia.org/wiki/Intrusion_detection_system)
+    - Some systems respond automatically
+- Found many examples
+    - see kaggle, google, etc. 
+    - Machine learning is industry standard for IDS
 - Bit off a trifle more than I could chew
-- Dataset: [UNSW-NB15 dataset](https://research.unsw.edu.au/projects/unsw-nb15-dataset) <!-- >
+- Dataset: [UNSW-NB15 dataset](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
     - Moustafa, Nour, and Jill Slay. "UNSW-NB15: a comprehensive data set for network intrusion detection systems (UNSW-NB15 network data set)."Military Communications and Information Systems Conference (MilCIS), 2015. IEEE, 2015.
     - Moustafa, Nour, and Jill Slay. "The evaluation of Network Anomaly Detection Systems: Statistical analysis of the UNSW-NB15 data set and the comparison with the KDD99 data set." Information Security Journal: A Global Perspective (2016): 1-14.
-- Paper: ["Network Intrusion Detection System using Deep Learning"](https://doi.org/10.1016/j.procs.2021.05.025) <!-- Goes through the steps of creating an ANN for IDS purposes -->
+    - This is designed as a successor to the popular KDD98, KDDCUP99 and NSLKDD datasets, and better reflects the state of network attacks in the 2010's
+- Paper: ["Network Intrusion Detection System using Deep Learning"](https://doi.org/10.1016/j.procs.2021.05.025)
+    - Goes through the steps of creating an ANN for IDS purposes
 # Explaination <!-- 2 min -->
 ## Detection methods
 - Signature-based
@@ -53,12 +60,26 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter
                                            Locale: en_US.UTF-8
 ```
 - Zephaniah has a better GPU, which I'm planning to use to actually train the network
-## Data Exploration
-### Explain categories
+## Import data
+### Categories
 - training_set / testing_set
-- NUSW-NB15_features.csv <!-- Extremely annoying -->
-- 
+- `NUSW-NB15_features.csv`
+    - A bit of a timesink
+    - Had nonexistant features
+    - Be careful on datasets with large amounts of features
+### Data cleaning / Feature engineering
+- Services were `-` not `None`
+- Some features highly correlated
 ## Network Results
-### Weaknesses
-### Strenths
-# Conclusion <!-- 1 min -->
+- Paper reported 97% to 99%(!) accuracy rate for convolutional network
+### Adventures in Convolutional Neural Networks
+- I attempted to create a 1-dimensional Convolutional Neural Network for packet classification
+- Such an network would have used a 3-dimensional dataset of data _over time_
+- While such time data was reported in `NUSW-NB15_features.csv`, it was not present in either the training or the testing datasets 😭
+- I would have reshaped the dataset around the timeframe data
+
+# Takeaways <!-- 1 min -->
+- Don't get stuck on little things!
+    - Technical explorations could have been more connected
+- Convolutional neural networks are an extremely powerful tool
+- Networks and packets are complecated beasts
