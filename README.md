@@ -4,4 +4,4 @@
 - [x] Packet analysis - TE-2
 - [ ] Anomaly detection - TE-3
 - [ ] Attack detection - TE-4
-- [ ] IDS - Final project
+- [x] IDS - Final project
